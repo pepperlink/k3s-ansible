@@ -24,10 +24,12 @@
 
 - name: Deploy vip manifest
   ansible.builtin.include_tasks: vip.yml
+  when: deploy_vip is defined and deploy_vip is true
+
 - name: Deploy metallb manifest
   ansible.builtin.include_tasks: metallb.yml
   tags: metallb
-  when: kube_vip_lb_ip_range is not defined and (not cilium_bgp or cilium_iface is not defined)
+  when: deploy_metallb is defined and deploy_metallb is true
 
 - name: Deploy kube-vip manifest
   ansible.builtin.include_tasks: kube-vip.yml
