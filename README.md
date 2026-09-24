@@ -1,3 +1,5 @@
+> **Pepperlink fork:** used as the cluster-provisioning dependency (Ansible collection) by [`pepperlink/home`](https://github.com/pepperlink/home) (`metal/ansible/collections/requirements.yml`); no artifacts are built from this copy, and its upstream CI is inert. Local commits: MetalLB / kube-vip vars (2025-02).
+
 # Automated build of HA k3s Cluster with `kube-vip` and MetalLB
 
 ![Fully Automated K3S etcd High Availability Install](https://img.youtube.com/vi/CbkEWcUZ7zM/0.jpg)
